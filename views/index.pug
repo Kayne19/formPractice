@@ -1,0 +1,29 @@
+extends layout
+
+block content
+  h1 My Form
+  form(action="/results" method="post")
+    label(for='name') Name:
+    input(type='text' id='name' name='name')
+    br
+    label(for="description") Describe your day yesterday:
+    br
+    textarea(id ="description" name = "description" cols=40 rows=5)
+    br
+    label(for="agree") Do you agree to keep going?
+    input(type="checkbox" name="agree" id="agree" value = "agree")
+    br
+    p How was your day yesterday?
+    input(type="radio" name="dayRating" id="Good" value="Good")
+    label(for="Good") Good
+
+    input(type="radio" name="dayRating" id="Bad" value="Bad")
+    label(for="Bad") Bad
+
+    input(type="radio" name="dayRating" id="Indifferent" value="Indifferent")
+    label(for="Indifferent") Indifferent
+
+    input(type="radio" name="dayRating" id="declineToAnswer" value="declineToAnswer")
+    label(for="declineToAnswer") Rather not say
+    br
+    button(type="submit") Submit This
